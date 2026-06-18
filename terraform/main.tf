@@ -26,6 +26,9 @@ resource "render_web_service" "flask_app" {
     ENV = {
       value = "production"
     }
+DATABASE_URL = {
+      value = "postgresql://valentin_database_user:1bAmOAhOXttGAFOvJZMI85RlfnWHmWDL@dpg-d8q4tru7r5hc73el89fg-a.frankfurt-postgres.render.com/valentin_database"
+    }
   }
 
   runtime_source = {
