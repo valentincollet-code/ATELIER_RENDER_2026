@@ -40,7 +40,7 @@ resource "render_web_service" "flask_app" {
 }
 
 resource "render_web_service" "adminer" {
-  name        = "adminer-${var.github_actor}"
+  name        = "adminer-v2-${var.github_actor}"
   plan        = "free"
   region      = "frankfurt"
 
