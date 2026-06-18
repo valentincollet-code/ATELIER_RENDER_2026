@@ -26,7 +26,7 @@ resource "render_web_service" "flask_app" {
     ENV = {
       value = "production"
     }
-DATABASE_URL = {
+    DATABASE_URL = {
       value = "postgresql://valentin_database_user:1bAmOAhOXttGAFOvJZMI85RlfnWHmWDL@dpg-d8q4tru7r5hc73el89fg-a.frankfurt-postgres.render.com/valentin_database"
     }
   }
@@ -37,14 +37,12 @@ DATABASE_URL = {
       tag       = var.image_tag
     }
   }
-
 }
 
 resource "render_web_service" "adminer" {
   name        = "adminer-${var.github_actor}"
   plan        = "free"
   region      = "frankfurt"
-  runtime     = "image"
 
   runtime_source = {
     image = {
